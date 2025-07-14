@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Vansh's Portfolio</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+
+    <link rel="stylesheet" href="css/aos.css">
+
+    <link rel="stylesheet" href="css/ionicons.min.css">
+    
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/style.css">
+
+
+
+<style>
+
+/*======================================
+//--//-->   ABOUT
+======================================*/
+
+.about-mf .box-shadow-full {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.about-mf .about-img {
+  margin-bottom: 2rem;
+}
+
+.about-mf .about-img img {
+  margin-left: 10px;
+}
+
+
+.skill-mf .progress {
+  /* background-color: #cde1f8; */
+  margin: .5rem 0 1.2rem 0;
+  border-radius: 0;
+  height: .7rem;
+}
+
+.skill-mf .progress .progress-bar {
+  height: .7rem;
+  background-color: #ffbd39;
+}
+
+
+/* Animation styles */
+#typing-animation {
+  position: relative;
+  font-size: 30px;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typing 3s steps(20, end) infinite;
+}
+
+#typing-animation:before {
+  content: "";
+  /* position: absolute; */
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: #ccc;
+  animation: typing-cursor 0.5s ease-in-out infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes typing-cursor {
+  from {
+    width: 5px;
+  }
+  to {
+    width: 0;
+  }
+}
+
+
+/* project image zoom effect */
+
+.zoom-effect {
+  overflow: hidden;
+  transition: transform 0.3s ease-out;
+}
+
+.zoom-effect:hover {
+  transform: scale(1.1);
+}
+
+
+</style>
+  </head>
+  <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+
+	<button id="chat-toggle">💬 Chat with Resume Bot</button>
+
+	<!-- Chatbot -->
+	<div class="chat-container" id="chat-container">
+	  <div id="chat-log"></div>
+	  <form id="chat-form">
+		<input type="text" id="user-input" placeholder="Ask about Vansh..." autocomplete="off" required />
+		<button type="submit">Send</button>
+	  </form>
+	</div>
+    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
+	    <div class="container">
+	      <a class="navbar-brand" href="index.html">Vansh</a>
+	      <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+	        <span class="oi oi-menu"></span> Menu
+	      </button>
+
+	      <div class="collapse navbar-collapse" id="ftco-nav">
+	        <ul class="navbar-nav nav ml-auto">
+	          <li class="nav-item"><a href="#home-section" class="nav-link"><span>Home</span></a></li>
+	          <li class="nav-item"><a href="#about-section" class="nav-link"><span>About</span></a></li>
+	          <li class="nav-item"><a href="#resume-section" class="nav-link"><span>Resume</span></a></li>
+			  <li class="nav-item"><a href="#education-section" class="nav-link"><span>Education</span></a></li>
+	          <li class="nav-item"><a href="#project-section" class="nav-link"><span>Projects</span></a></li>
+	          <li class="nav-item"><a href="#contact-section" class="nav-link"><span>Contact</span></a></li>
+	        </ul>
+	      </div>
+	    </div>
+	  </nav>
+	  <section id="home-section" class="hero">
+		  <div class="home-slider  owl-carousel">
+	       <div class="slider-item ">
+	      	<div class="overlay"></div>
+	         <div class="container">
+	          <div class="row d-md-flex no-gutters slider-text align-items-end justify-content-end" data-scrollax-parent="true">
+	          	<div class="one-third js-fullheight order-md-last img" style="background-image:url(images/d.png);">
+	          	 <div class="overlay"></div>
+	          	</div>
+		          <div class="one-forth d-flex  align-items-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
+		          	<div class="text">
+		          		<span class="subheading">Hi!</span>
+			            <h1 class="mb-4 mt-3">I'm <span>Vansh</span></h1>
+						<span id="typing-animation"></span>
+			            <h2>Computer Science Undergrad DTU</h2>
+			            <p><a href="https://drive.google.com/file/d/1BbLw8BDP3-TuLGveJa96lIdThzqL8X4l/view?usp=sharing" class="btn btn-primary py-3 px-4">Resume</a> 
+							<a href="https://github.com/vanshkwalia" class="btn btn-white btn-outline-white py-3 px-4">Github</a></p>
+		            </div>
+		          </div>
+	        	</div>
+	        </div>
+	      </div>
+		</div>
+    </section>
+
+	<section class="ftco-section ftco-no-pb" id="about-section">
+  <div class="container">
+    <div class="row justify-content-center pb-5">
+      <div class="col-md-10 heading-section text-center ftco-animate">
+        <h1 class="big big-2">About Me</h1>
+        <h2 class="mb-4">About</h2>
+        <p>
+          Hi! I'm Vansh Kumar Walia, a B.Tech student in Computer Science and Engineering at Delhi Technological University (DTU), graduating in 2028. I’m passionate about building real-world tech solutions and solving complex problems through code.
+          <br><br>
+          I have a strong command over Data Structures, Algorithms, and Web Development. I specialize in creating modern, responsive web applications using technologies like HTML, CSS, JavaScript, Node.js, Express, MongoDB, and React. I've also explored full-stack development in hackathons and personal projects, such as <strong>GuardianX</strong>, which used Web Speech API and Google Maps API.
+          <br><br>
+          Alongside technical skills, I enjoy participating in team-driven tech events, debugging tricky problems, and continuously upskilling in areas like system design and backend architecture. I aim to develop scalable, impactful, and user-friendly digital products while growing into a versatile full-stack developer.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+	
+	<section class="ftco-section ftco-no-pb" id="resume-section">
+  <div class="container">
+    <div class="row justify-content-center pb-5">
+      <div class="col-md-10 heading-section text-center ftco-animate">
+        <h1 class="big big-2">Resume</h1>
+        <h2 class="mb-4">Resume</h2>
+        <p>
+          <strong>Education:</strong><br>
+          - <strong>Bachelor of Technology</strong> in Computer Science & Engineering, Delhi Technological University (DTU), 2024–2028<br>
+          - <strong>Senior Secondary (CBSE)</strong>, 96% (2024)<br>
+          - <strong>Secondary (CBSE)</strong>, 95% (2022)<br><br>
+
+          <strong>Technical Skills:</strong><br>
+          - <strong>Languages:</strong> C++, C, Java, Python, SQL<br>
+          - <strong>Web Development:</strong> HTML, CSS, JavaScript, Node.js, Express.js, MongoDB, React.js<br>
+          - <strong>Tools & APIs:</strong> Git/GitHub, Google Maps API, Web Speech API, Android Studio, Postman<br><br>
+
+          <strong>Achievements:</strong><br>
+			- <strong>Hackathon Finalist – Vihaan 8.0:</strong> Created GuardianX, a voice-based emergency safety app using Google Maps & Web Speech API<br>
+			- <strong>LeetCode:</strong> Solved 200+ problems including medium and hard-level challenges, consistently improving coding efficiency and problem-solving skills.<br>
+			- <strong>GeeksforGeeks:</strong> Solved 300+ DSA problems across various topics. Active contributor in GFG coding contests and practice sets.<br><br>
+
+
+          <strong>Positions of Responsibility:</strong><br>
+          - <strong>Team Leader</strong – Ghost Clan (Vihaan 8.0 Hackathon Team)<br>
+          - <strong>Project Developer</strong> – GuardianX Hackathon Project<br>
+          - <strong>Marketing Executive</strong> – Engifest'25 (Annunal Cultural Fest) <br>
+		  - <strong>Team Member</strong> – Google Developer's Student Club <br>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+	<section id="education-section" class="ftco-section">
+	<div class="container">
+		<div class="row justify-content-center pb-5">
+		<div class="col-md-10 heading-section text-center ftco-animate">
+			<h1 class="big big-2">Education</h1>
+			<h2 class="mb-4">Education</h2>
+		</div>
+		</div>
+
+		<!-- All Education Boxes in Same Row (Flex Wrap Enabled) -->
+		<div class="row d-flex flex-wrap">
+		<!-- Box 1 -->
+		<div class="col-md-6 d-flex mb-4">
+			<div class="resume-wrap ftco-animate w-100" style="min-height: 220px;">
+			<span class="date">2024–2028</span>
+			<h2>Bachelor of Technology</h2>
+			<span class="position">Delhi Technological University (DTU)</span>
+			<p class="mt-4">Computer Science and Engineering | CGPA: 8.20 (Till 1st Semester)</p>
+			</div>
+		</div>
+
+		<!-- Box 2 -->
+		<div class="col-md-6 d-flex mb-4">
+			<div class="resume-wrap ftco-animate w-100" style="min-height: 220px;">
+			<span class="date">2023</span>
+			<h2>Senior Secondary (XII)</h2>
+			<span class="position">Central Board of Secondary Education (CBSE)</span>
+			<p class="mt-4">Percentage: 96%</p>
+			</div>
+		</div>
+
+		<!-- Box 3 -->
+		<div class="col-md-6 d-flex mb-4">
+			<div class="resume-wrap ftco-animate w-100" style="min-height: 220px;">
+			<span class="date">2021</span>
+			<h2>Secondary (X)</h2>
+			<span class="position">Central Board of Secondary Education (CBSE)</span>
+			<p class="mt-4">Percentage: 95%</p>
+			</div>
+		</div>
+		</div>
+
+		<!-- CV Button -->
+		<div class="row justify-content-center mt-3">
+		<div class="col-md-6 text-center ftco-animate">
+			<p>
+			<a href="https://drive.google.com/file/d/1BbLw8BDP3-TuLGveJa96lIdThzqL8X4l/view?usp=sharing" class="btn btn-primary py-4 px-5">Download CV</a>
+			</p>
+		</div>
+		</div>
+	</div>
+	</section>
+					
+
+		<section class="ftco-section" id="project-section">
+			<div class="container">
+				<div class="row justify-content-center mb-5 pb-5">
+					<div class="col-md-7 heading-section text-center ftco-animate">
+						<h1 class="big big-2">Projects</h1>
+						<h2 class="mb-4">Projects</h2>
+						<p>Technical projects showcasing my skills in Python, Web Development, and Data Structures.</p>
+					</div>
+				</div>
+				<div class="row d-flex">
+					<!-- Project 1: Image Compression -->
+					<div class="col-md-4 d-flex ftco-animate">
+						<div class="blog-entry justify-content-end">
+							<div class="block-20 zoom-effect" style="background-image: url('images/aa.png');"></div>
+							<div class="text mt-3 float-right d-block">
+								<h3 class="heading">Image Compression Using QuadTrees</h3>
+								<p>Developed a Python tool to compress images using quadtree data structures. Technologies: Python, NumPy, OpenCV.</p>
+								<a href="https://github.com/VanshKWalia/Image-Compression-Using-QuadTree" class="btn btn-sm btn-primary">View on GitHub</a>
+							</div>
+						</div>
+					</div>
+		
+					<!-- Project 2: Smart File Organizer -->
+					<div class="col-md-4 d-flex ftco-animate">
+						<div class="blog-entry justify-content-end">
+							<div class="block-20 zoom-effect" style="background-image: url('images/bb.png');"></div>
+							<div class="text mt-3 float-right d-block">
+								<h3 class="heading">Smart File Organizer</h3>
+								<p>Automated file sorting with MySQL integration. Technologies: Python, MySQL, OS modules.</p>
+								<a href="https://github.com/VanshKWalia/Smart-File-Organiser" class="btn btn-sm btn-primary">View on GitHub</a>
+							</div>
+						</div>
+					</div>
+		
+					<!-- Project 3: Personal Portfolio Website -->
+					<div class="col-md-4 d-flex ftco-animate">
+						<div class="blog-entry">
+							<div class="block-20 zoom-effect" style="background-image: url('images/cc.png');"></div>
+							<div class="text mt-3 float-right d-block">
+								<h3 class="heading">Personal Portfolio Website</h3>
+								<p>Responsive portfolio showcasing my profile, projects, education, and an integrated chatbot using HTML, CSS, JavaScript, and Node.js.</p>
+								<a href="https://github.com/VanshKWalia/Personal-Portfolio-Website" class="btn btn-sm btn-primary">View on GitHub</a>
+							</div>
+						</div>
+					</div>
+				<br>
+				<!-- Minor Projects Row -->
+				<div class="row d-flex justify-content-center">  
+					<!-- Project 4: Sorting Visualizer -->
+					<div class="col-md-4 d-flex ftco-animate">
+						<div class="blog-entry justify-content-end">
+							<div class="block-20 zoom-effect" style="background-image: url('images/dd.png');"></div>
+							<div class="text mt-3 float-right d-block">
+								<h3 class="heading">Sorting Algorithm Visualizer</h3>
+								<p>Interactive tool to visualize sorting algorithms. Technologies: Python, Tkinter.</p>
+								<a href="https://github.com/VanshKWalia/Sorting-Algorithm-Visualiser" class="btn btn-sm btn-primary">View on GitHub</a>
+							</div>
+						</div>
+					</div>
+		
+					<!-- Project 5: Flappy Bird -->
+					<div class="col-md-4 d-flex ftco-animate">
+						<div class="blog-entry justify-content-end">
+							<div class="block-20 zoom-effect" style="background-image: url('images/ee.png');"></div>
+							<div class="text mt-3 float-right d-block">
+								<h3 class="heading">Flappy Bird Game</h3>
+								<p>Classic game recreated using Pygame. Technologies: Python, Pygame.</p>
+								<a href="https://github.com/VanshKWalia/Flappy-Bird-Game" class="btn btn-sm btn-primary">View on GitHub</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+    <section class="ftco-section contact-section ftco-no-pb" id="contact-section">
+      <div class="container">
+      	<div class="row justify-content-center mb-5 pb-3">
+          <div class="col-md-7 heading-section text-center ftco-animate">
+            <h1 class="big big-2">Contact</h1>
+            <h2 class="mb-4">Contact Me</h2>
+          </div>
+        </div>
+
+        <div class="row d-flex contact-info mb-5">
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-map-signs"></span>
+          		</div>
+          		<h3 class="mb-4">Address</h3>
+	            <p>Delhi, India</p>
+	          </div>
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-phone2"></span>
+          		</div>
+          		<h3 class="mb-4">Contact Number</h3>
+	            <p><a href="tel://+919289819740">+91 9289819740</a></p>
+	          </div>
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-paper-plane"></span>
+          		</div>
+          		<h3 class="mb-4">Email Address</h3>
+	            <p><a href="mailto:vansh_cs24a07_038@dtu.ac.in">vansh_cs24a07_038@dtu.ac.in</a></p>
+	          </div>
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-globe"></span>
+          		</div>
+          		<h3 class="mb-4">Download Resume</h3>
+	            <p><a href="https://drive.google.com/file/d/1BbLw8BDP3-TuLGveJa96lIdThzqL8X4l/view?usp=sharing">Link</a></p>
+	          </div>
+          </div>
+
+   <div class="container">
+  <br><br>
+  <ul class="ftco-footer-social list-unstyled d-flex justify-content-center align-items-center mb-0" style="gap: 15px;">
+
+    <!-- LinkedIn -->
+    <li class="ftco-animate">
+      <a href="https://www.linkedin.com/in/vansh-k-walia-a12953323" target="_blank" rel="noopener noreferrer"
+         style="background-color: #1c1c1c; border-radius: 50%; padding: 12px; display: inline-block;">
+        <span class="icon-linkedin" style="color: #fdbb2d;"></span>
+      </a>
+    </li>
+
+    <!-- Instagram -->
+    <li class="ftco-animate">
+      <a href="https://www.instagram.com/vansh_k_walia?igsh=MTU1OTNoNXF4aDI1NA==" target="_blank" rel="noopener noreferrer"
+         style="background-color: #1c1c1c; border-radius: 50%; padding: 12px; display: inline-block;">
+        <span class="icon-instagram" style="color: #fdbb2d;"></span>
+      </a>
+    </li>
+
+    <!-- Facebook -->
+    <li class="ftco-animate">
+      <a href="https://www.facebook.com/share/1GF5APddjh/" target="_blank" rel="noopener noreferrer"
+         style="background-color: #1c1c1c; border-radius: 50%; padding: 12px; display: inline-block;">
+        <span class="icon-facebook" style="color: #fdbb2d;"></span>
+      </a>
+    </li>
+
+    <!-- GeeksforGeeks -->
+    <li class="ftco-animate">
+      <a href="https://www.geeksforgeeks.org/user/vanshko93g/" target="_blank" rel="noopener noreferrer"
+         style="background-color: #1c1c1c; border-radius: 50%; padding: 10px; display: inline-block; width: 48px; height: 48px;">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/4/43/GeeksforGeeks.svg" alt="GFG" width="28" height="28" style="display: block; margin: auto;">
+      </a>
+    </li>
+
+    <!-- LeetCode -->
+    <li class="ftco-animate">
+      <a href="https://leetcode.com/u/vansh_k_walia/" target="_blank" rel="noopener noreferrer"
+         style="background-color: #1c1c1c; border-radius: 50%; padding: 10px; display: inline-block; width: 48px; height: 48px;">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/1/19/LeetCode_logo_black.png" alt="LeetCode" width="26" height="26" style="display: block; margin: auto;">
+      </a>
+    </li>
+
+  </ul>
+  <br>
+</div>
+
+
+   </div>
+ </section>
+
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="js/jquery.waypoints.min.js"></script>
+  <script src="js/jquery.stellar.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/jquery.animateNumber.min.js"></script>
+  <script src="js/scrollax.min.js"></script>
+  
+  <script src="js/main.js"></script>
+    
+  </body>
+</html>
