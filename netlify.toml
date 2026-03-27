@@ -1,0 +1,5 @@
+[[redirects]]
+  from = "https://frabjous-scone-87170d.netlify.app/*"
+  to = "https://vanshkwalia-portfolio.netlify.app/:splat"
+  status = 301
+  force = true
