@@ -46,7 +46,6 @@
 
 
 .skill-mf .progress {
-  /* background-color: #cde1f8; */
   margin: .5rem 0 1.2rem 0;
   border-radius: 0;
   height: .7rem;
@@ -67,11 +66,12 @@
   overflow: hidden;
   white-space: nowrap;
   animation: typing 3s steps(20, end) infinite;
+  display: block;
+  max-width: 100%;
 }
 
 #typing-animation:before {
   content: "";
-  /* position: absolute; */
   top: 0;
   left: 0;
   width: 0;
@@ -81,26 +81,16 @@
 }
 
 @keyframes typing {
-  from {
-    width: 0;
-  }
-  to {
-    width: 100%;
-  }
+  from { width: 0; }
+  to { width: 100%; }
 }
 
 @keyframes typing-cursor {
-  from {
-    width: 5px;
-  }
-  to {
-    width: 0;
-  }
+  from { width: 5px; }
+  to { width: 0; }
 }
 
-
 /* project image zoom effect */
-
 .zoom-effect {
   overflow: hidden;
   transition: transform 0.3s ease-out;
@@ -110,6 +100,129 @@
   transform: scale(1.1);
 }
 
+/* ======================================
+   MOBILE FIXES
+====================================== */
+
+/* Chat toggle button - mobile friendly */
+@media (max-width: 575.98px) {
+  #chat-toggle {
+    bottom: 16px;
+    right: 16px;
+    padding: 10px 14px;
+    font-size: 13px;
+    border-radius: 20px;
+  }
+
+  #chat-container {
+    bottom: 70px;
+    right: 10px;
+    left: 10px;
+    width: auto;
+    max-height: 70vh;
+  }
+
+  #chat-log {
+    max-height: 55vh;
+    font-size: 13px;
+  }
+
+  #chat-form input {
+    font-size: 13px;
+    padding: 8px 10px;
+  }
+
+  #chat-form button {
+    padding: 8px 12px;
+    font-size: 13px;
+  }
+
+  /* Hero section fix for small screens */
+  #typing-animation {
+    font-size: 20px;
+  }
+
+  /* Resume section text alignment on mobile */
+  #resume-section .col-md-10 p {
+    text-align: left;
+  }
+
+  /* Project cards full width on mobile */
+  .blog-entry {
+    width: 100%;
+  }
+
+  /* Contact info boxes padding */
+  .contact-section .box {
+    padding: 1.5rem !important;
+  }
+
+  /* Reduce big heading size on mobile */
+  .big.big-2 {
+    font-size: 60px !important;
+  }
+}
+
+@media (max-width: 767.98px) {
+  /* Chat container responsive on tablets too */
+  #chat-container {
+    right: 10px;
+    left: 10px;
+    width: auto;
+    bottom: 70px;
+  }
+
+  /* Hero section - typing animation */
+  #typing-animation {
+    font-size: 22px;
+    white-space: normal;
+    animation: none;
+    width: 100%;
+  }
+
+  /* Make hero text more readable on mobile */
+  .one-forth .text h2 {
+    font-size: 20px !important;
+    color: #fff !important;
+  }
+
+  /* Project columns full width on mobile */
+  .col-md-4.d-flex {
+    margin-bottom: 20px;
+  }
+
+  /* Fix social icons wrapping */
+  .ftco-footer-social {
+    flex-wrap: wrap !important;
+    gap: 10px !important;
+  }
+
+  /* Education boxes equal height */
+  .resume-wrap {
+    width: 100%;
+  }
+
+  /* Navbar text alignment */
+  .ftco-navbar-light .navbar-nav .nav-item .nav-link {
+    padding: 8px 0;
+  }
+}
+
+/* Fix for navbar toggler button on mobile */
+@media (max-width: 991.98px) {
+  .ftco_navbar .navbar-toggler {
+    border-color: rgba(255,255,255,0.3);
+  }
+
+  /* Fix hero section overlay text on tablet */
+  .slider-item .slider-text .text {
+    padding: 1.5em !important;
+  }
+
+  .slider-item .slider-text h1 {
+    font-size: 42px !important;
+  }
+}
 
 </style>
   </head>
@@ -288,63 +401,61 @@
 				</div>
 				<div class="row d-flex">
 					<!-- Project 1: Image Compression -->
-					<div class="col-md-4 d-flex ftco-animate">
-						<div class="blog-entry justify-content-end">
+					<div class="col-md-4 col-sm-6 col-12 d-flex ftco-animate mb-4">
+						<div class="blog-entry justify-content-end w-100">
 							<div class="block-20 zoom-effect" style="background-image: url('images/aa.png');"></div>
-							<div class="text mt-3 float-right d-block">
+							<div class="text mt-3 d-block">
 								<h3 class="heading">Image Compression Using QuadTrees</h3>
 								<p>Developed a Python tool to compress images using quadtree data structures. Technologies: Python, NumPy, OpenCV.</p>
-								<a href="https://github.com/VanshKWalia/Image-Compression-Using-QuadTree" class="btn btn-sm btn-primary">View on GitHub</a>
+								<a href="https://github.com/VanshKWalia/Image-Compression-Using-QuadTree" class="btn btn-sm btn-primary" target="_blank" rel="noopener noreferrer">View on GitHub</a>
 							</div>
 						</div>
 					</div>
-		
+
 					<!-- Project 2: Smart File Organizer -->
-					<div class="col-md-4 d-flex ftco-animate">
-						<div class="blog-entry justify-content-end">
+					<div class="col-md-4 col-sm-6 col-12 d-flex ftco-animate mb-4">
+						<div class="blog-entry justify-content-end w-100">
 							<div class="block-20 zoom-effect" style="background-image: url('images/bb.png');"></div>
-							<div class="text mt-3 float-right d-block">
+							<div class="text mt-3 d-block">
 								<h3 class="heading">Smart File Organizer</h3>
 								<p>Automated file sorting with MySQL integration. Technologies: Python, MySQL, OS modules.</p>
-								<a href="https://github.com/VanshKWalia/Smart-File-Organiser" class="btn btn-sm btn-primary">View on GitHub</a>
+								<a href="https://github.com/VanshKWalia/Smart-File-Organiser" class="btn btn-sm btn-primary" target="_blank" rel="noopener noreferrer">View on GitHub</a>
 							</div>
 						</div>
 					</div>
-		
+
 					<!-- Project 3: Personal Portfolio Website -->
-					<div class="col-md-4 d-flex ftco-animate">
-						<div class="blog-entry">
+					<div class="col-md-4 col-sm-6 col-12 d-flex ftco-animate mb-4">
+						<div class="blog-entry w-100">
 							<div class="block-20 zoom-effect" style="background-image: url('images/cc.png');"></div>
-							<div class="text mt-3 float-right d-block">
+							<div class="text mt-3 d-block">
 								<h3 class="heading">Personal Portfolio Website</h3>
 								<p>Responsive portfolio showcasing my profile, projects, education, and an integrated chatbot using HTML, CSS, JavaScript, and Node.js.</p>
-								<a href="https://github.com/VanshKWalia/Personal-Portfolio-Website" class="btn btn-sm btn-primary">View on GitHub</a>
+								<a href="https://github.com/VanshKWalia/Personal-Portfolio-Website" class="btn btn-sm btn-primary" target="_blank" rel="noopener noreferrer">View on GitHub</a>
 							</div>
 						</div>
 					</div>
-				<br>
-				<!-- Minor Projects Row -->
-				<div class="row d-flex justify-content-center">  
+
 					<!-- Project 4: Sorting Visualizer -->
-					<div class="col-md-4 d-flex ftco-animate">
-						<div class="blog-entry justify-content-end">
+					<div class="col-md-4 col-sm-6 col-12 d-flex ftco-animate mb-4">
+						<div class="blog-entry justify-content-end w-100">
 							<div class="block-20 zoom-effect" style="background-image: url('images/dd.png');"></div>
-							<div class="text mt-3 float-right d-block">
+							<div class="text mt-3 d-block">
 								<h3 class="heading">Sorting Algorithm Visualizer</h3>
 								<p>Interactive tool to visualize sorting algorithms. Technologies: Python, Tkinter.</p>
-								<a href="https://github.com/VanshKWalia/Sorting-Algorithm-Visualiser" class="btn btn-sm btn-primary">View on GitHub</a>
+								<a href="https://github.com/VanshKWalia/Sorting-Algorithm-Visualiser" class="btn btn-sm btn-primary" target="_blank" rel="noopener noreferrer">View on GitHub</a>
 							</div>
 						</div>
 					</div>
-		
+
 					<!-- Project 5: Flappy Bird -->
-					<div class="col-md-4 d-flex ftco-animate">
-						<div class="blog-entry justify-content-end">
+					<div class="col-md-4 col-sm-6 col-12 d-flex ftco-animate mb-4">
+						<div class="blog-entry justify-content-end w-100">
 							<div class="block-20 zoom-effect" style="background-image: url('images/ee.png');"></div>
-							<div class="text mt-3 float-right d-block">
+							<div class="text mt-3 d-block">
 								<h3 class="heading">Flappy Bird Game</h3>
 								<p>Classic game recreated using Pygame. Technologies: Python, Pygame.</p>
-								<a href="https://github.com/VanshKWalia/Flappy-Bird-Game" class="btn btn-sm btn-primary">View on GitHub</a>
+								<a href="https://github.com/VanshKWalia/Flappy-Bird-Game" class="btn btn-sm btn-primary" target="_blank" rel="noopener noreferrer">View on GitHub</a>
 							</div>
 						</div>
 					</div>
